@@ -2,6 +2,7 @@ package net.vinny.newbeaches.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
@@ -11,17 +12,20 @@ import net.minecraft.util.Identifier;
 import net.vinny.newbeaches.NewBeaches;
 
 public class ModItems {
-
     public static final Item COCONUT = registerItem("coconut",
             new Item(new FabricItemSettings()));
     public static final Item COCONUT_FLESH = registerItem("coconut_flesh",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().food(
+                    new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NewBeaches.MOD_ID, name), item);
     }
 
     public static void addItemsToItemGroup() {
+        addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT);
+        addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT_FLESH);
+
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT_FLESH);
     }
