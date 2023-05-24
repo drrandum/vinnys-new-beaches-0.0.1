@@ -56,22 +56,12 @@ public class CoconutMilkBottle extends Item {
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 40;
+        return 32;
     }
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
-    }
-
-    @Override
-    public SoundEvent getDrinkSound() {
-        return SoundEvents.ENTITY_GENERIC_DRINK;
-    }
-
-    @Override
-    public SoundEvent getEatSound() {
-    return SoundEvents.ENTITY_GENERIC_DRINK;
     }
 
     @Override
