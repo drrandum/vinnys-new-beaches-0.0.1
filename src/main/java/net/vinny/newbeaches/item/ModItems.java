@@ -17,6 +17,9 @@ public class ModItems {
     public static final Item COCONUT_FLESH = registerItem("coconut_flesh",
             new Item(new FabricItemSettings().food(
                     new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
+    public static final Item BOTTLE_OF_COCONUT_WATER = registerItem("coconut_water",
+            new Item(new FabricItemSettings().food(
+                    new FoodComponent.Builder().hunger(2).saturationModifier(8f).build())));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NewBeaches.MOD_ID, name), item);
