@@ -9,8 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -18,7 +16,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class CoconutMilkBottle extends Item {
-    public CoconutMilkBottle(Settings settings) {
+    public CoconutMilkBottle(Item.Settings settings) {
         super(settings);
     }
     @Override
