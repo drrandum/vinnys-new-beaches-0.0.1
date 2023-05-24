@@ -2,6 +2,7 @@ package net.vinny.newbeaches;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.vinny.newbeaches.block.ModBlocks;
 import net.vinny.newbeaches.item.ModItemGroup;
 import net.vinny.newbeaches.item.ModItems;
 import org.slf4j.Logger;
@@ -15,5 +16,6 @@ public class NewBeaches implements ModInitializer {
     public void onInitialize() {
         ModItemGroup.registerItemGroups();
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
     }
 }
