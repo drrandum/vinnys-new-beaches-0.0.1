@@ -17,9 +17,9 @@ public class ModItems {
     public static final Item COCONUT_FLESH = registerItem("coconut_flesh",
             new Item(new FabricItemSettings().food(
                     new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
-    public static final Item BOTTLE_OF_COCONUT_WATER = registerItem("coconut_water",
-            new Item(new FabricItemSettings().food(
-                    new FoodComponent.Builder().hunger(2).saturationModifier(8f).build())));
+    public static final CoconutMilkBottle COCONUT_MILK_BOTTLE = new CoconutMilkBottle(
+            new FabricItemSettings().food(
+                    new FoodComponent.Builder().hunger(2).saturationModifier(8f).build()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NewBeaches.MOD_ID, name), item);
@@ -28,9 +28,11 @@ public class ModItems {
     public static void addItemsToItemGroup() {
         addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT);
         addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT_FLESH);
+        addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT_MILK_BOTTLE);
 
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT_FLESH);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT_MILK_BOTTLE);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
