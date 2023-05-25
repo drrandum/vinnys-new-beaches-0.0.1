@@ -17,7 +17,10 @@ import net.vinny.newbeaches.item.ModItemGroup;
 public class ModBlocks {
 
     public static final Block VINNY_BLOCK = registerBlock("vinny_block",
-            new Block(FabricBlockSettings.of(Material.STONE).resistance(60000f)),
+            new Block(FabricBlockSettings.of(Material.STONE)
+                    .requiresTool()
+                    .resistance(60000f)
+                    .strength(6.0f)),
             ModItemGroup.NEW_BEACHES);
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
