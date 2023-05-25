@@ -16,6 +16,8 @@ public class ModItems {
                     new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
     public static final Item COCONUT_MILK_BOTTLE = registerItem("coconut_milk_bottle",
             new CoconutMilkBottle(new FabricItemSettings()));
+    public static final Item VINNY_ITEM = registerItem("vinny_item",
+            new Item(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(NewBeaches.MOD_ID, name), item);

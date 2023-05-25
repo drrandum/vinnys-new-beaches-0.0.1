@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "newbeaches:vinny_item"
+    }
+  },
+  "result": {
+    "item": "newbeaches:vinny_block",
+    "count": 1
+  }
+}
