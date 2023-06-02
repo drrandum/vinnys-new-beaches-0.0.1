@@ -27,6 +27,7 @@ public class ModItems {
         addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT);
         addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT_FLESH);
         addToItemGroup(ModItemGroup.NEW_BEACHES, COCONUT_MILK_BOTTLE);
+        addToItemGroup(ModItemGroup.NEW_BEACHES, VINNY_ITEM);
 
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, COCONUT_FLESH);
