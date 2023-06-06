@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -22,6 +24,20 @@ public class ModBlocks {
                     .resistance(60000f)
                     .strength(6.0f)),
             ModItemGroup.NEW_BEACHES);
+
+    public static final Block PALM_LOG = registerBlock("palm_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+    public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+    public static final Block PALM_WOOD = registerBlock("palm_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+    public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registries.BLOCK, new Identifier(NewBeaches.MOD_ID, name), block);
