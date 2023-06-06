@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 3.0,
+  "group": "newbeaches",
+  "ingredient": {
+    "item": "newbeaches:vinny_item"
+  },
+  "result": "newbeaches:coconut"
+}

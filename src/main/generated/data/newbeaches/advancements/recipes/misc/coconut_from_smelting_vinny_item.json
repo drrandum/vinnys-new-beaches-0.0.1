@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:coconut_from_smelting_vinny_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vinny_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "newbeaches:vinny_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vinny_item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:coconut_from_smelting_vinny_item"
+    ]
+  }
+}
