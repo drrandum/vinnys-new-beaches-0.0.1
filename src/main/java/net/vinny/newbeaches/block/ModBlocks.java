@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.vinny.newbeaches.NewBeaches;
 import net.vinny.newbeaches.item.ModItemGroup;
+import net.vinny.newbeaches.world.tree.PalmSaplingGenerator;
 
 public class ModBlocks {
 
@@ -43,7 +44,7 @@ public class ModBlocks {
             ModItemGroup.NEW_BEACHES);
 
     public static final Block PALM_SAPLING = registerBlock("palm_sapling",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
+            new SaplingBlock(new PalmSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
             ModItemGroup.NEW_BEACHES);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
