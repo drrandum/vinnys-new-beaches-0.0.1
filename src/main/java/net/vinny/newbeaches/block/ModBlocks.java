@@ -3,10 +3,7 @@ package net.vinny.newbeaches.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -29,13 +26,24 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
             ModItemGroup.NEW_BEACHES);
     public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()),
             ModItemGroup.NEW_BEACHES);
     public static final Block PALM_WOOD = registerBlock("palm_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4.0f).requiresTool()),
             ModItemGroup.NEW_BEACHES);
     public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+
+    public static final Block PALM_PLANKS = registerBlock("palm_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+    public static final Block PALM_LEAVES = registerBlock("palm_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4.0f).requiresTool()),
+            ModItemGroup.NEW_BEACHES);
+
+    public static final Block PALM_SAPLING = registerBlock("palm_sapling",
+            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
             ModItemGroup.NEW_BEACHES);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

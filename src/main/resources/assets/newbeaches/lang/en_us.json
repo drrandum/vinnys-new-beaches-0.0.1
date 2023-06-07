@@ -4,5 +4,15 @@
   "item.newbeaches.coconut_milk_bottle": "Coconut Milk Bottle",
   "item.newbeaches.vinny_item": "Vinny Item",
 
+  "block.newbeaches.palm_log": "Palm Log",
+  "block.newbeaches.stripped_palm_log": "Stripped Palm Log",
+  "block.newbeaches.palm_wood": "Palm Wood",
+  "block.newbeaches.stripped_palm_wood": "Stripped Palm Wood",
+
+  "block.newbeaches.palm_planks": "Palm Planks",
+  "block.newbeaches.palm_leaves": "Palm Leaves",
+
+  "block.newbeaches.palm_sapling": "Palm Sapling",
+
   "block.newbeaches.vinny_block": "Vinny Block"
 }

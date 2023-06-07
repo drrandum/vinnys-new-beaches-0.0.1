@@ -16,6 +16,18 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VINNY_BLOCK);
+
+        blockStateModelGenerator.registerLog(ModBlocks.PALM_LOG)
+                .log(ModBlocks.PALM_LOG)
+                .wood(ModBlocks.PALM_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PALM_LOG)
+                .log(ModBlocks.STRIPPED_PALM_LOG)
+                .wood(ModBlocks.STRIPPED_PALM_WOOD);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALM_PLANKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALM_LEAVES);
+
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.PALM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "newbeaches:block/palm_sapling"
+  }
+}
